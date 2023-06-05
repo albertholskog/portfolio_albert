@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-
+import NavBar from "./component/NavBar";
 import backgroundImage from "./assets/icon/Background.svg";
 import "./App.css";
 import About from "./component/About";
@@ -19,7 +19,7 @@ function App() {
           minHeight: "100vh",
         }}
       >
-        <Navbar />
+        <NavBar />
         <Container maxWidth={"lg"}>
           <About />
           <Experience />
