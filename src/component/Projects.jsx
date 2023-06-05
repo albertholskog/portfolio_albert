@@ -16,9 +16,21 @@ function Projects() {
       <Typography variant="h2" textAlign={"center"} sx={{ mb: 5 }}>
         My projects
       </Typography>
-      <Grid container gap={4} justifyContent={"center"} sx={{mb:15}}>
+      <Grid container gap={4} justifyContent={"center"} sx={{ mb: 15 }}>
         {projectsData.map((project) => (
-          <Grid item xs={12} sm={12} md={5} key={project.name}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={5}
+            key={project.name}
+            sx={{
+              transition: "transform 0.3s",
+              "&:hover": {
+                transform: "scale(1.05)",
+              },
+            }}
+          >
             <Card
               sx={{
                 background:
@@ -42,7 +54,12 @@ function Projects() {
                 <Typography variant="p">{project.description}</Typography>
               </CardContent>
               <CardActions
-                sx={{ display: "flex", justifyContent: "space-between", flexWrap:"wrap-reverse", gap:2}}
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexWrap: "wrap-reverse",
+                  gap: 2,
+                }}
               >
                 <Box sx={{ display: "flex", gap: 2 }}>
                   <Button

@@ -87,6 +87,7 @@ export const lightTheme = createTheme({
       fontFamily: "Hossa Soft Medium, Arial, sans-serif",
       borderColor: color.primary,
       fontSize: 14,
+      letterSpacing: "0.1em",
     },
   },
 });

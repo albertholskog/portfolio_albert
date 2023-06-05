@@ -36,7 +36,7 @@ function Contact() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              gap: 1,
+              gap: 2,
             }}
           >
             <Email />
@@ -70,7 +70,7 @@ function Contact() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              gap: 1,
+              gap: 2,
             }}
           >
             <Linkedin />
