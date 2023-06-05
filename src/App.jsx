@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import Navbar from "./component/navBar";
+
 import backgroundImage from "./assets/icon/Background.svg";
 import "./App.css";
 import About from "./component/About";
