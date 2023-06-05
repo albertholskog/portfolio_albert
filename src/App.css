@@ -1,0 +1,33 @@
+
+
+
+@font-face {
+    font-family: 'Hossa Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Hossa Light'), url('Hossa-Light.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Hossa Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Hossa Medium'), url('Hossa-Medium.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Hossa Soft Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Hossa Soft Light'), url('HossaSoft-Light.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Hossa Soft Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Hossa Soft Medium'), url('HossaSoft-Medium.woff') format('woff');
+    }

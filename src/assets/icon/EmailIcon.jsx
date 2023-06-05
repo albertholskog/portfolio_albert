@@ -1,0 +1,20 @@
+function EmailIcon() {
+  return (
+    <svg
+      width="35"
+      height="30"
+      viewBox="0 0 35 30"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M31.5 4.58203L17.5 18.636L3.5 4.56201V4H31.5V4.58203ZM3.5 26V9.89001L17.5 23.96L31.5 9.90601V26H3.5ZM0 30H35V0H0V30Z"
+        fill="#FFFEFF"
+      />
+    </svg>
+  );
+}
+
+export default EmailIcon;
