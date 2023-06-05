@@ -3,7 +3,7 @@ import NavBar from "./component/NavBar";
 import backgroundImage from "./assets/icon/Background.svg";
 import "./App.css";
 import About from "./component/About";
-import Experience from "./component/experience";
+
 import { Container } from "@mui/material";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
