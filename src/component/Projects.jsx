@@ -26,6 +26,7 @@ function Projects() {
           animation="slide"
           navButtonsAlwaysVisible={true}
           autoPlay={false}
+          indicators={false}
         >
           <CarouselProjects data={slideOne} matches={matches} />
           <CarouselProjects data={slideTwo} matches={matches} />
@@ -49,7 +50,7 @@ function Projects() {
         </Typography>
         <Carousel
           animation="slide"
-          navButtonsAlwaysVisible={true}
+          navButtonsAlwaysVisible={false}
           autoPlay={false}
         >
           {slide.map((item) => (

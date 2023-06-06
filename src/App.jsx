@@ -24,7 +24,6 @@ function App() {
         <Container maxWidth={"xl"}>
           <About />
           <Experience />
-
           <Projects />
           <Contact />
         </Container>

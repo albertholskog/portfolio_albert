@@ -30,12 +30,12 @@ function Experience() {
           sx={{
             background:
               "linear-gradient(45deg, rgba(5, 25, 55, 1), rgba(40, 81, 92, 0.55))",
-            py: 5,
+            pb:10,pt:8,
             borderRadius: 1.5,
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
           }}
         >
-          <Typography variant="h3" textAlign={"center"} sx={{ mb: 3 }}>
+          <Typography variant="h3" textAlign={"center"} sx={{ mb: 5 }}>
             Front-end skills
           </Typography>
           <Box
@@ -73,12 +73,12 @@ function Experience() {
           sx={{
             background:
               "linear-gradient(45deg, rgba(5, 25, 55, 1), rgba(40, 81, 92, 0.55))",
-            py: 5,
+              pb:10,pt:8,
             borderRadius: 1.5,
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
           }}
         >
-          <Typography variant="h3" textAlign={"center"} sx={{ mb: 3 }}>
+          <Typography variant="h3" textAlign={"center"} sx={{ mb: 5 }}>
             Other Skills
           </Typography>
           <Box

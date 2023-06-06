@@ -6,7 +6,6 @@ import {
   Card,
   CardContent,
   Typography,
-  CardActions,
   Button,
 } from "@mui/material";
 
@@ -31,71 +30,87 @@ function CarouselProjects({ data, matches }) {
               filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
               p: 3,
               height: 1,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
             }}
           >
-            <CardMedia
-              component="img"
-              image={data.image}
-              alt={data.name}
-              sx={{
-                height: 225,
-                width: 1,
-                borderRadius: 1.5,
-                objectPosition: "top",
-              }}
-            />
-            <CardContent>
-              <Typography variant="h3" sx={{ color: "#4DC8B9" }}>
-                {data.name}
-              </Typography>
-              <Typography variant="p">{data.description}</Typography>
-            </CardContent>
-            <CardActions
+            <Box>
+              <CardMedia
+                component="img"
+                image={data.image}
+                alt={data.name}
+                sx={{
+                  height: 225,
+                  width: 1,
+                  borderRadius: 1.5,
+                  objectPosition: "top",
+                }}
+              />
+              <CardContent>
+                <Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                      gap: 1,
+                      mb: 2,
+                    }}
+                  >
+                    <Typography variant="h3" sx={{ color: "#4DC8B9" }}>
+                      {data.name}
+                    </Typography>
+                    <Typography variant="p">{data.project}</Typography>
+                  </Box>
+                  <Typography variant="p">{data.description}</Typography>
+                </Box>
+              </CardContent>
+            </Box>
+
+            <CardContent
               sx={{
                 display: "flex",
-                flexDirection:"row-reverse",
-                flexWrap:"wrap",
-                alignItems: "center",
-                justifyContent: "start",
-                gap: 1,
-                pb:2
+                flexDirection: "column",
+                justifyContent: "space-between",
               }}
             >
               <Box
                 sx={{
                   display: "flex",
-                  gap: 2,
-                  mt: 1,
-                  pl: 1,
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  flexWrap: "wrap-reverse",
                 }}
               >
-                {data.icons &&
-                  data.icons.map((icon, index) => <i key={index}>{icon}</i>)}
-              </Box>
-              <Box sx={{ display: "flex", gap: 2, flexWrap:"wrap" }}>
-                <Button
-                  variant="outlined"
-                  color="white"
-                  sx={{ borderColor: "#4DC8B9" }}
-                  component="a"
-                  href={data.githubLink}
-                  target="_blank"
-                >
-                  GitHub
-                </Button>
-                {data.demoLink.length === 0 ? null : (
+                <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
                   <Button
-                    variant="contained"
+                    variant="outlined"
+                    color="white"
+                    sx={{ borderColor: "#4DC8B9" }}
                     component="a"
-                    href={data.demoLink}
+                    href={data.githubLink}
                     target="_blank"
-                  
                   >
-                    Live Demo
+                    GitHub
                   </Button>
-                )}
+                  {data.demoLink.length === 0 ? null : (
+                    <Button
+                      variant="contained"
+                      component="a"
+                      href={data.demoLink}
+                      target="_blank"
+                    >
+                      Live Demo
+                    </Button>
+                  )}
+                </Box>
+                <Box sx={{ display: "flex", gap: 1 }}>
+                  {data.icons &&
+                    data.icons.map((icon, index) => <i key={index}>{icon}</i>)}
+                </Box>
               </Box>
-            </CardActions>
+            </CardContent>
           </Card>
         </Grid>
       </Grid>
@@ -112,8 +127,6 @@ function CarouselProjects({ data, matches }) {
             sm={12}
             md={5}
             sx={{
-              width: "100%",
-
               transition: "transform 0.3s",
               "&:hover": {
                 transform: "scale(1.05)",
@@ -128,69 +141,88 @@ function CarouselProjects({ data, matches }) {
                 filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
                 p: 3,
                 height: 1,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
               }}
             >
-              <CardMedia
-                component="img"
-                image={project.image}
-                alt={project.name}
-                sx={{
-                  height: 225,
-                  width: 1,
-                  borderRadius: 1.5,
-                  objectPosition: "top",
-                }}
-              />
-              <CardContent>
-                <Typography variant="h3" sx={{ color: "#4DC8B9" }}>
-                  {project.name}
-                </Typography>
-                <Typography variant="p">{project.description}</Typography>
-              </CardContent>
-              <CardActions
+              <Box>
+                <CardMedia
+                  component="img"
+                  image={project.image}
+                  alt={project.name}
+                  sx={{
+                    height: 225,
+                    width: 1,
+                    borderRadius: 1.5,
+                    objectPosition: "top",
+                  }}
+                />
+                <CardContent>
+                  <Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        mb: 2,
+                      }}
+                    >
+                      <Typography variant="h3" sx={{ color: "#4DC8B9" }}>
+                        {project.name}
+                      </Typography>
+                      <Typography variant="p">{project.project}</Typography>
+                    </Box>
+                    <Typography variant="p">{project.description}</Typography>
+                  </Box>
+                </CardContent>
+              </Box>
+
+              <CardContent
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "flex-start",
-                  gap: 1,
+                  justifyContent: "space-between",
                 }}
               >
                 <Box
                   sx={{
                     display: "flex",
-                    gap: 2,
-                    mt: 1,
-                    pl: 1,
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    flexWrap: "wrap-reverse",
                   }}
                 >
-                  {project.icons &&
-                    project.icons.map((icon, index) => (
-                      <i key={index}>{icon}</i>
-                    ))}
-                </Box>
-                <Box sx={{ display: "flex", gap: 2 }}>
-                  <Button
-                    variant="outlined"
-                    color="white"
-                    sx={{ borderColor: "#4DC8B9" }}
-                    component="a"
-                    href={project.githubLink}
-                    target="_blank"
-                  >
-                    GitHub
-                  </Button>
-                  {project.demoLink.length === 0 ? null : (
+                  <Box>
                     <Button
-                      variant="contained"
+                      variant="outlined"
+                      color="white"
+                      sx={{ borderColor: "#4DC8B9" }}
                       component="a"
-                      href={project.demoLink}
+                      href={project.githubLink}
                       target="_blank"
                     >
-                      Live Demo
+                      GitHub
                     </Button>
-                  )}
+                    {project.demoLink.length === 0 ? null : (
+                      <Button
+                        sx={{ ml: 2 }}
+                        variant="contained"
+                        component="a"
+                        href={project.demoLink}
+                        target="_blank"
+                      >
+                        Live Demo
+                      </Button>
+                    )}
+                  </Box>
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    {project.icons &&
+                      project.icons.map((icon, index) => (
+                        <i key={index}>{icon}</i>
+                      ))}
+                  </Box>
                 </Box>
-              </CardActions>
+              </CardContent>
             </Card>
           </Grid>
         ))}
