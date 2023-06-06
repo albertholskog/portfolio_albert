@@ -26,13 +26,14 @@ function Contact() {
       <Grid container gap={4} justifyContent={"center"} sx={{ pb: 15 }}>
         <Grid
           item
-          md={5}
+          xs={12}
+          sm={5}
           sx={{
             background:
               "linear-gradient(45deg, rgba(5, 25, 55, 1), rgba(40, 81, 92, 0.55))",
             borderRadius: 1.5,
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-            py: 8,
+            py: 8, px:4,
             height: 1,
           }}
         >
@@ -66,13 +67,14 @@ function Contact() {
         </Grid>
         <Grid
           item
-          md={5}
+          xs={12}
+          sm={5}
           sx={{
             background:
               "linear-gradient(45deg, rgba(5, 25, 55, 1), rgba(40, 81, 92, 0.55))",
             borderRadius: 1.5,
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-            py: 8,
+            py: 8, px:4,
             height: 1,
           }}
         >
