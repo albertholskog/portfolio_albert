@@ -14,7 +14,12 @@ function Contact() {
   };
   return (
     <>
-      <Typography variant="h2" textAlign={"center"} sx={{ mb: 5 }}>
+      <Typography
+        variant="h2"
+        id="contact"
+        textAlign={"center"}
+        sx={{ mb: 5, mt: 10 }}
+      >
         Contact
       </Typography>
       <Grid container gap={4} justifyContent={"center"} sx={{ pb: 15 }}>

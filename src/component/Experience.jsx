@@ -18,7 +18,7 @@ import XdIcon from "../assets/icon/XdIcon";
 function Experience() {
   return (
     <>
-      <Typography variant="h2" textAlign={"center"} sx={{ mb: 5 }}>
+      <Typography variant="h2" id="experience" textAlign={"center"} sx={{ mb: 5 }}>
         My experience
       </Typography>
       <Grid container justifyContent={"center"} gap={4} sx={{ mb: 15 }}>

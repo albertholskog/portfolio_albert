@@ -8,6 +8,7 @@ import { Container } from "@mui/material";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
 
+
 function App() {
   return (
     <>
@@ -20,9 +21,10 @@ function App() {
         }}
       >
         <NavBar />
-        <Container maxWidth={"lg"}>
+        <Container maxWidth={"xl"}>
           <About />
           <Experience />
+
           <Projects />
           <Contact />
         </Container>

@@ -4,6 +4,7 @@ import profileImages from "../assets/profileImages.jpg";
 function About() {
   return (
     <Grid
+    id="about"
       container
       justifyContent={"center"}
       alignItems={"center"}
