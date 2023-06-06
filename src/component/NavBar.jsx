@@ -9,13 +9,16 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+
   const theme = useTheme();
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     if (!isMediumScreen) {
@@ -23,9 +26,6 @@ function Navbar() {
     }
   }, [isMediumScreen]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -41,12 +41,37 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      window.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
+  const toggleMenu = (event) => {
+    event.stopPropagation();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const handleHeadingClick = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsMenuOpen(false);
   };
+
   const navbarBackground = hasScrolled
     ? "linear-gradient(45deg, rgba(5, 25, 55, 1), rgba(40, 81, 92, 0.9))"
     : "transparent";
@@ -84,6 +109,7 @@ function Navbar() {
                   top="100%"
                   left="0"
                   right="0"
+                  ref={dropdownRef}
                   sx={{
                     background: dropdownMenuBackground,
                     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
@@ -127,28 +153,28 @@ function Navbar() {
             <Box display="flex" justifyContent="center" flexGrow={1}>
               <Typography
                 variant="h2"
-                sx={{ mx: 2 }}
+                sx={{ mx: 2, cursor:"pointer" }}
                 onClick={() => handleHeadingClick("about")}
               >
                 About Me
               </Typography>
               <Typography
                 variant="h2"
-                sx={{ mx: 2 }}
+                sx={{ mx: 2, cursor:"pointer" }}
                 onClick={() => handleHeadingClick("experience")}
               >
                 Experience
               </Typography>
               <Typography
                 variant="h2"
-                sx={{ mx: 2 }}
+                sx={{ mx: 2, cursor:"pointer" }}
                 onClick={() => handleHeadingClick("projects")}
               >
                 My Projects
               </Typography>
               <Typography
                 variant="h2"
-                sx={{ mx: 2 }}
+                sx={{ mx: 2, cursor:"pointer" }}
                 onClick={() => handleHeadingClick("contact")}
               >
                 Contact
