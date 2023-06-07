@@ -57,7 +57,7 @@ const projectsData = [
     description: `Bid:it is an auction website where you can create your own listings and bid on others items.
      You can create your own user on the site or you can search for special items.
      I wanted the design to be clean and simple with few disturbances so that the items up for bidding would be in focus`,
-    demoLink: "https://bright-hotteok-d98ecd.netlify.app/",
+    demoLink: "https://albertholskog.github.io/Semester-Project-2/index.html",
     icons: [
       <JavascriptIcon key="Javascript" size={20} />,
       <BootstrapIcon key="Bootstrap" size={20} />,
