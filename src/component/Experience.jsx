@@ -79,7 +79,7 @@ function Experience() {
           }}
         >
           <Typography variant="h3" textAlign={"center"} sx={{ mb: 5 }}>
-            Other Skills
+            Other skills
           </Typography>
           <Box
             sx={{
