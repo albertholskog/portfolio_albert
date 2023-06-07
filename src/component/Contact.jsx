@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import Email from "../assets/icon/EmailIcon";
+
 import Linkedin from "../assets/icon/LinkedinIcon";
 import MailIcon from '@mui/icons-material/Mail';
 
@@ -34,7 +34,7 @@ function Contact() {
             borderRadius: 1.5,
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
             py: 8, px:4,
-            height: 1,
+            
           }}
         >
           <Box
@@ -47,7 +47,7 @@ function Contact() {
             }}
           >
            <MailIcon sx={{color:"#FFFEFF", fontSize:37}}/>
-            <Typography variant="p">Albert_holskog@live.no</Typography>
+            <Typography variant="p">albert_holskog@live.no</Typography>
             <Button
               variant="outlined"
               color="white"
@@ -75,7 +75,7 @@ function Contact() {
             borderRadius: 1.5,
             filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
             py: 8, px:4,
-            height: 1,
+          
           }}
         >
           <Box
@@ -88,7 +88,7 @@ function Contact() {
             }}
           >
             <Linkedin />
-            <Typography variant="p">Contact me on linkedin</Typography>
+            <Typography variant="p">Contact me on LinkedIn</Typography>
             <Button
               variant="outlined"
               color="white"

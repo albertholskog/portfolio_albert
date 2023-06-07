@@ -50,7 +50,7 @@ function Projects() {
         </Typography>
         <Carousel
           animation="slide"
-          navButtonsAlwaysVisible={false}
+          navButtonsAlwaysInvisible={true}
           autoPlay={false}
         >
           {slide.map((item) => (

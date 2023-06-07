@@ -64,7 +64,7 @@ function About() {
         >
           Welcome!
         </Typography>
-        <Typography variant="h3" sx={{ mb: 4, mt: 2, animationDelay: "1s" }}>
+        <Typography variant="h3" sx={{ mb: 4, mt: 2,  }}>
           I am a front-end developer
         </Typography>
         <Typography
