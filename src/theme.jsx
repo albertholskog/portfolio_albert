@@ -58,7 +58,7 @@ export const lightTheme = createTheme({
     h2: {
       fontFamily: "Hossa Light, Arial, sans-serif",
       color: color.white,
-      fontSize: 22,
+      fontSize: 30,
     },
     h3: {
       fontFamily: "Hossa Light, Arial, sans-serif",

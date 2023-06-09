@@ -49,8 +49,7 @@ function Projects() {
           My projects
         </Typography>
         <Carousel
-          animation="slide"
-          navButtonsAlwaysInvisible={true}
+          animation="fade"
           autoPlay={false}
         >
           {slide.map((item) => (

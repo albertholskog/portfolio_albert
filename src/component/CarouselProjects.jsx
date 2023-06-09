@@ -79,6 +79,7 @@ function CarouselProjects({ data, matches }) {
                 sx={{
                   display: "flex",
                   alignItems: "center",
+                  gap:2,
                   justifyContent: "space-between",
                   flexWrap: "wrap-reverse",
                 }}
@@ -105,7 +106,7 @@ function CarouselProjects({ data, matches }) {
                     </Button>
                   )}
                 </Box>
-                <Box sx={{ display: "flex", gap: 1 }}>
+                <Box sx={{ display: "flex", gap: 2 }}>
                   {data.icons &&
                     data.icons.map((icon, index) => <i key={index}>{icon}</i>)}
                 </Box>
@@ -188,6 +189,7 @@ function CarouselProjects({ data, matches }) {
                   sx={{
                     display: "flex",
                     alignItems: "center",
+                    gap:2,
                     justifyContent: "space-between",
                     flexWrap: "wrap-reverse",
                   }}
@@ -215,7 +217,7 @@ function CarouselProjects({ data, matches }) {
                       </Button>
                     )}
                   </Box>
-                  <Box sx={{ display: "flex", gap: 1 }}>
+                  <Box sx={{ display: "flex", gap: 2 }}>
                     {project.icons &&
                       project.icons.map((icon, index) => (
                         <i key={index}>{icon}</i>

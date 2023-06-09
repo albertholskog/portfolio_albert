@@ -1,9 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import profileImages from "../assets/profileImages.jpg";
 
-
 function About() {
-
   return (
     <Grid
       container
@@ -20,7 +18,6 @@ function About() {
         sx={{
           display: "flex",
           justifyContent: "center",
-      
         }}
       >
         <Box
@@ -53,26 +50,20 @@ function About() {
         md={6}
         sx={{
           textAlign: { xs: "center", ms: "center", md: "left" },
-         
         }}
       >
         <Typography
           variant="h2"
           color="primary"
-          fontSize={32}
+          fontSize={35}
           sx={{ mt: { xs: 2, ms: 2, md: 0 } }}
         >
           Welcome!
         </Typography>
-        <Typography variant="h3" sx={{ mb: 4, mt: 2,  }}>
+        <Typography variant="h3" sx={{ mb: 4, mt: 2 }}>
           I am a front-end developer
         </Typography>
-        <Typography
-          variant="p"
-          letterSpacing="0.04em"
-          lineHeight="24px"
-         
-        >
+        <Typography variant="p" letterSpacing="0.04em" lineHeight="24px">
           Hello! My name is Albert Holskog. I studied Front-End Development at
           Noroff University College in Kristiansand. I used to work as a sailor,
           but I wanted to challenge myself and learn something new. Solving

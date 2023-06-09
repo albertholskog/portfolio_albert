@@ -44,10 +44,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsMenuOpen(false);
       }
     };
@@ -120,28 +117,28 @@ function Navbar() {
                 >
                   <Typography
                     variant="h2"
-                    sx={{ my: 1 }}
+                    sx={{ my: 1, fontSize: 22 }}
                     onClick={() => handleHeadingClick("about")}
                   >
                     About Me
                   </Typography>
                   <Typography
                     variant="h2"
-                    sx={{ my: 1 }}
+                    sx={{ my: 1, fontSize: 22 }}
                     onClick={() => handleHeadingClick("experience")}
                   >
                     Experience
                   </Typography>
                   <Typography
                     variant="h2"
-                    sx={{ my: 1 }}
+                    sx={{ my: 1, fontSize: 22 }}
                     onClick={() => handleHeadingClick("projects")}
                   >
                     My Projects
                   </Typography>
                   <Typography
                     variant="h2"
-                    sx={{ my: 1 }}
+                    sx={{ my: 1, fontSize: 22 }}
                     onClick={() => handleHeadingClick("contact")}
                   >
                     Contact
@@ -153,28 +150,28 @@ function Navbar() {
             <Box display="flex" justifyContent="center" flexGrow={1}>
               <Typography
                 variant="h2"
-                sx={{ mx: 2, cursor:"pointer" }}
+                sx={{ mx: 2, cursor: "pointer", fontSize: 22 }}
                 onClick={() => handleHeadingClick("about")}
               >
                 About Me
               </Typography>
               <Typography
                 variant="h2"
-                sx={{ mx: 2, cursor:"pointer" }}
+                sx={{ mx: 2, cursor: "pointer", fontSize: 22 }}
                 onClick={() => handleHeadingClick("experience")}
               >
                 Experience
               </Typography>
               <Typography
                 variant="h2"
-                sx={{ mx: 2, cursor:"pointer" }}
+                sx={{ mx: 2, cursor: "pointer", fontSize: 22 }}
                 onClick={() => handleHeadingClick("projects")}
               >
                 My Projects
               </Typography>
               <Typography
                 variant="h2"
-                sx={{ mx: 2, cursor:"pointer" }}
+                sx={{ mx: 2, cursor: "pointer", fontSize: 22 }}
                 onClick={() => handleHeadingClick("contact")}
               >
                 Contact
